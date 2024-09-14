@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #000;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .info-section,
+        .notes-section {
+            flex: 1;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        #3d-viewer {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background-color: #ddd;
+            margin-bottom: 20px;
+        }
+
+        #bookmark-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 16px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            color: white;
+            background-color: #e74c3c;
+            border: none;
+            cursor: pointer;
+        }
+
+        #bookmark-button i {
+            margin-right: 5px;
+        }
+
+        #notes-textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            resize: none;
+        }
+
+        #save-notes-button {
+            margin-top: 10px;
+            width: 100%;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h2>Botanica</h2>
+    </nav>
+
+    <div class="container">
+        <div class="info-section">
+            <h2 id="plant-name">Plant Name</h2>
+            <p><strong>Scientific Name:</strong> <span id="scientific-name"></span></p>
+            <p><strong>Family:</strong> <span id="family"></span></p>
+            <p><strong>Region:</strong> <span id="region"></span></p>
+            <p><strong>Usage:</strong> <span id="usage"></span></p>
+            <p><strong>Benefits:</strong> <span id="benefits"></span></p>
+        </div>
+
+        <div id="3d-viewer">
+            <button id="bookmark-button" class="btn btn-primary">
+                <i class="fas fa-heart"></i> Bookmark
+            </button>
+        </div>
+
+        <div class="notes-section">
+            <h3>Notes</h3>
+            <textarea id="notes-textarea" class="form-control" placeholder="Write your notes here..."></textarea>
+            <button id="save-notes-button" class="btn btn-primary">Save Notes</button>
+        </div>
+    </div>
+
+    <footer>
+        <p> &copy; botanica</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://threejs.org/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/loaders/OBJLoader.js"></script>
+
+    <script src="plant.js"></script>
+</body>
+
+</html>
+
+
+
+
+
