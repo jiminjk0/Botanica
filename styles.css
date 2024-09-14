@@ -1,0 +1,610 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Light grey background */
+    color: #333;
+}
+
+/* Navbar */
+nav {
+    background-color: #000; /* Black */
+    color: white;
+    padding: 10px 15px; /* Reduced padding for a smaller navbar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px; /* Smaller font size */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 8px; /* Reduced margin for smaller spacing */
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px; /* Smaller font size */
+    display: flex;
+    align-items: center;
+    padding: 5px 10px; /* Reduced padding for smaller buttons */
+    border-radius: 4px; /* Smaller border-radius */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+nav ul li a i {
+    margin-right: 5px; /* Reduced margin between icon and text */
+    font-size: 18px; /* Smaller icon size */
+}
+
+nav ul li a:hover {
+    background-color: #333; /* Darker grey */
+    transform: scale(1.05);
+}
+
+/* Search and Filter Form */
+#search-filter-form {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+#search-filter-form input,
+#search-filter-form select,
+#search-filter-form button {
+    margin: 3px; /* Reduced margin */
+    padding: 8px; /* Reduced padding */
+    font-size: 14px; /* Smaller font size */
+    border-radius: 6px; /* Smaller border-radius */
+    border: 1px solid #ddd;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#search-filter-form input:focus,
+#search-filter-form select:focus,
+#search-filter-form button:focus {
+    border-color: #000; /* Black */
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+#search-filter-form button {
+    background-color: #333; /* Dark grey */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#search-filter-form button i {
+    margin-right: 3px; /* Reduced margin */
+    font-size: 16px; /* Smaller icon size */
+}
+
+#search-filter-form button:hover {
+    background-color: #000; /* Black */
+    transform: scale(1.05);
+}
+
+/* Plant Cards Container */
+#plant-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.plant-card {
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    margin: 15px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    background-color: #ffffff; /* White */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.plant-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.plant-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #000; /* Black */
+    color: white;
+    text-align: center;
+    padding: 10px 15px; /* Reduced padding */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+    margin: 0;
+    font-size: 12px; /* Smaller font size */
+}
+
+/* Favorites Page */
+#favorites-container {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.favorite-card {
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    margin: 15px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    background-color: #ffffff; /* White */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.favorite-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.favorite-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Notes Page */
+#notes-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.note-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #ffffff; /* White */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.note-card h3 {
+    margin-top: 0;
+}
+
+.note-card textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    resize: none;
+    font-size: 16px;
+}
+
+/* Feedback Page */
+#feedback-section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff; /* White */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+#feedback-section h2 {
+    margin-bottom: 20px;
+}
+
+#feedback-section .rating {
+    margin-bottom: 20px;
+}
+
+#feedback-section .rating label {
+    font-size: 20px;
+    margin: 0 5px;
+    color: #333; /* Dark grey for stars */
+    cursor: pointer;
+}
+
+#feedback-section textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    resize: none;
+    font-size: 16px;
+}
+
+#feedback-section button {
+    background-color: #333; /* Dark grey */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#feedback-section button:hover {
+    background-color: #000; /* Black */
+}
+
+/* Contact Us Page */
+#contact-section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff; /* White */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+#contact-section h2 {
+    margin-bottom: 20px;
+}
+
+#contact-section input, 
+#contact-section textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#contact-section textarea {
+    height: 150px;
+    resize: none;
+}
+
+#contact-section button {
+    background-color: #333; /* Dark grey */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact-section button:hover {
+    background-color: #000; /* Black */
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Light grey background */
+    color: #333;
+}
+
+/* Navbar */
+nav {
+    background-color: #000; /* Black */
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left form {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left form input,
+.navbar-left form select,
+.navbar-left form button {
+    margin: 5px;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.navbar-left form input:focus,
+.navbar-left form select:focus,
+.navbar-left form button:focus {
+    border-color: #000; /* Black */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-left form button {
+    background-color: #333; /* Dark grey */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.navbar-left form button:hover {
+    background-color: #000; /* Black */
+    transform: scale(1.05);
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: auto; /* Pushes "Botanica" to the right */
+    padding-right: 20px;
+}
+
+.navbar-right ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right ul li {
+    margin: 0 10px;
+}
+
+.navbar-right ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.navbar-right ul li a:hover {
+    background-color: #333; /* Darker grey */
+    transform: scale(1.05);
+}
+
+/* Plant Cards Container */
+#plant-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.plant-card {
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    margin: 15px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    background-color: #ffffff; /* White */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.plant-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.plant-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #000; /* Black */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Favorites Page */
+#favorites-container {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.favorite-card {
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    margin: 15px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    background-color: #ffffff; /* White */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.favorite-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.favorite-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Notes Page */
+#notes-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.note-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #ffffff; /* White */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.note-card h3 {
+    margin-top: 0;
+}
+
+.note-card textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    resize: none;
+    font-size: 16px;
+}
+
+/* Feedback Page */
+#feedback-section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff; /* White */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+#feedback-section h2 {
+    margin-bottom: 20px;
+}
+
+#feedback-section .rating {
+    margin-bottom: 20px;
+}
+
+#feedback-section .rating label {
+    font-size: 20px;
+    margin: 0 5px;
+    color: #333; /* Dark grey for stars */
+    cursor: pointer;
+}
+
+#feedback-section textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    resize: none;
+    font-size: 16px;
+}
+
+#feedback-section button {
+    background-color: #333; /* Dark grey */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#feedback-section button:hover {
+    background-color: #000; /* Black */
+}
+
+/* Contact Us Page */
+#contact-section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff; /* White */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+#contact-section h2 {
+    margin-bottom: 20px;
+}
+
+#contact-section input, 
+#contact-section textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#contact-section textarea {
+    height: 150px;
+    resize: none;
+}
+
+#contact-section button {
+    background-color: #333; /* Dark grey */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact-section button:hover {
+    background-color: #000; /* Black */
+}
